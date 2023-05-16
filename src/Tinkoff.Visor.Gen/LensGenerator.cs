@@ -9,7 +9,7 @@ namespace Tinkoff.Visor.Gen
     [Generator]
     public class LensGenerator : IIncrementalGenerator
     {
-        static string Indent(int Steps) => new string(' ', Steps * 4);
+        static string Indent(int steps) => new string(' ', steps * 4);
 
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {

@@ -9,7 +9,7 @@ namespace Tinkoff.Visor.Gen
 {
     internal static class ContainingTypesBuilder
     {
-        static string Indent(int Steps) => new string(' ', Steps * 4);
+        static string Indent(int steps) => new string(' ', steps * 4);
 
         static IEnumerable<INamespaceOrTypeSymbol> ContainingNamespaceAndTypes(ISymbol symbol, bool includeSelf)
         {
