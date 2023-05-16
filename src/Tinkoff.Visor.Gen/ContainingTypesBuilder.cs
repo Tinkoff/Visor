@@ -71,7 +71,7 @@ namespace Tinkoff.Visor.Gen
                     output.AppendLine("#nullable disable");
 
                 if (propertySymbol.Type.IsRecord && propertySymbol.NullableAnnotation != NullableAnnotation.Annotated && buildNested)
-                    BuildNested(symbol, "", propertySymbol, output, initialIndent + 1);
+                    BuildNested(symbol, string.Empty, propertySymbol, output, initialIndent + 1);
             }
 
             output.AppendLine($"{Indent(initialIndent + 1)}}}");
