@@ -58,9 +58,11 @@ namespace Tinkoff.Visor.Gen
 
                 if (opticsAttrData is null) continue;
 
+                var withNested = !opticsAttrData.ConstructorArguments.IsEmpty && (opticsAttrData.ConstructorArguments.First().Value as bool? ?? false);
+
                 var filename = $"{EscapeFileName(symbol.ToDisplayString())}.Optics.g.cs";
 
-                var code = ContainingTypesBuilder.Build(symbol);
+                var code = ContainingTypesBuilder.Build(symbol, withNested);
 
                 context.AddSource(filename, code);
             }
