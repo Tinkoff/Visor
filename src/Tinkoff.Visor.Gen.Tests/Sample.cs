@@ -1,5 +1,3 @@
-using Tinkoff.Visor;
-
 namespace Tinkoff.Visor.Gen.Tests;
 
 [Optics]
